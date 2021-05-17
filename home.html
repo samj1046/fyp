@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <title>Home</title>
+  <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script>
+    function SubForm (){
+        $.ajax({
+            url:'https://api.apispreadsheets.com/data/9007/',
+            type:'post',
+            data:$("#myForm").serializeArray(),
+            success: function(){
+              alert("Form Data Submitted :)")
+            },
+            error: function(){
+              alert("There was an error :(")
+            }
+        });
+
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+    body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+    }
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .bgimg-1 {
+    background-image: url('assets/images/c92021champs.jpg');
+    min-height: 100%;
+    }
+    .bgimg-2 {
+    background-image: url("assets/images/main.png");
+    min-height: 400px;
+    }
+    .bgimg-3 {
+    background-image: url("assets/images/worlds.jpg");
+    min-height: 400px;
+    }
+    .w3-wide {letter-spacing: 10px;}
+    .w3-hover-opacity {cursor: pointer;}
+    @media only screen and (max-device-width: 1600px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: scroll;
+    min-height: 400px;
+    }
+    }
+  </style>
+  <body>
+    <div class="w3-top">
+      <div class="w3-bar" id="myNavbar">
+        <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+        <i class="fa fa-bars"></i>
+        </a>
+        <a href="#home" class="w3-bar-item w3-button">HOME</a>
+        <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+        <a href="#ourgames" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> OUR GAMES</a>
+        <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+        <i class="fa fa-search"></i>
+        </a>
+      </div>
+      <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+        <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+        <a href="#ourgames" class="w3-bar-item w3-button" onclick="toggleFunction()">OURSGAMES</a>
+        <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+        <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+      </div>
+    </div>
+    <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
+      <div class="w3-display-middle" style="white-space:nowrap;">
+        <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">THE <span class="w3-hide-small">ESPORTS</span> HUB</span>
+      </div>
+    </div>
+    <div class="w3-content w3-container w3-padding-64" id="about">
+      <h3 class="w3-center"><a href="index.html">To Tournament Site</a></h3>
+      <h3 class="w3-center">ABOUT US</h3>
+      <p class="w3-center"><em>We Love Esports</em></p>
+      <p>
+        This website is home of all things Esports, from monitoring existing leagues to being able to create your own league in a simple and easy way.
+        The top  esports tournaments where your team and test yourself against thousands of players from over Europe.
+        The website offers support for most, if not all current Esports titles such as League of Legends, CSGO, Rocket League and Valorant with the plans to implement support for other titles soon.
+      </p>
+      <div class="w3-row">
+        <div class="w3-col m6 w3-center w3-padding-large">
+          <p><b><i class="fa fa-user w3-margin-right"></i>Sam Johnson (Owner)</b></p>
+          <br>
+          <img src="/w3images/avatar_hat.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="Photo of Me" width="500" height="333">
+        </div>
+        <div class="w3-col m6 w3-hide-small w3-padding-large">
+          <p>League of Legends is a team-based strategy game where two teams of five powerful champions face off to destroy the other's base. Choose from over 140 champions to make epic plays, secure kills, and take down towers as you battle your way to victory.</p>
+          <p>Dota 2 is a multiplayer online battle arena (MOBA) video game in which two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the "Ancient", whilst defending their own.</p>
+          <p>This is the classic game mode that put Counter-Strike on the map. Two teams of five compete in a best-of-30 match using standard competitive Counter-Strike rules. Players must purchase armor, weapons, defuse or rescue kits, and manage their in-game economy to maximize their chance of success.</p>
+          <p>It's a 5v5 multiplayer first-person shooter (FPS) where one team attacks and the other defends. The main game mode, Search and Destroy, is very similar to CS:GO. The attacking team's goal is to plant a bomb (called a spike) and have it detonate, while the defending team tries to avoid that.</p>
+          <p>Rocket League is a fantastical sport-based video game, developed by Psyonix (it's “soccer with cars”). It features a competitive game mode based on teamwork and outmaneuvering opponents. Players work with their team to advance the ball down the field, and score goals in their opponents' net.</p>
+          <p>Clash Royale is a freemium real-time strategy video game developed and published by Supercell. The game combines elements from collectible card games, tower defense, and multiplayer online battle arena.</p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-row w3-center w3-dark-grey w3-padding-16">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">6+</span><br>
+        Games
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">100+</span><br>
+        Tournaments Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">1000+</span><br>
+        Happy Users
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Combined Years Of Experience
+      </div>
+    </div>
+    <div class="bgimg-2 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">Our Games</span>
+      </div>
+    </div>
+    <div class="w3-content w3-container w3-padding-64" id="ourgames">
+      <h3 class="w3-center">OUR GAMES</h3>
+      <p class="w3-center"><em>Below are all the games we provide tournaments for.<br> Click on the images to make them bigger</em></p>
+      <br>
+      <div class="w3-row-padding w3-center">
+        <div class="w3-col m3">
+          <img src="assets/images/LeagueOfLegendsLogo.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+        </div>
+        <div class="w3-col m3">
+          <img src="assets/images/Dota2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+        </div>
+        <div class="w3-col m3">
+          <img src="assets/images/csgo.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+        </div>
+        <div class="w3-col m3">
+          <img src="assets/images/valorant.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+        </div>
+      </div>
+      <div class="w3-row-padding w3-center w3-section">
+        <div class="w3-col m3">
+          <img src="assets/images/clashroyal.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+        </div>
+        <div class="w3-col m3">
+          <img src="assets/images/rocketleague.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+        </div>
+        <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">With More On Their Way!</button>
+      </div>
+    </div>
+    <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+      <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+        <img id="img01" class="w3-image">
+        <p id="caption" class="w3-opacity w3-large"></p>
+      </div>
+    </div>
+    <div class="bgimg-3 w3-display-container w3-opacity-min">
+      <div class="w3-display-middle">
+        <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+      </div>
+    </div>
+    <div class="w3-content w3-container w3-padding-64" id="contact">
+      <h3 class="w3-center">WHERE WE OPERATE</h3>
+      <div class="w3-row w3-padding-32 w3-section">
+        <div class="w3-col m4 w3-container">
+          <img src="assets/images/la.jpg" class="w3-image w3-round" style="width:100%">
+        </div>
+        <div class="w3-col m8 w3-panel">
+          <div class="w3-large w3-margin-bottom">
+            <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> LA<br>
+            <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: 07946274531<br>
+            <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: samj1046@gmail.com<br>
+          </div>
+          <form id="myForm">
+            <h2>Contact Us</h2>
+            <label>Full Name</label>
+            <br/>
+            <input name="name" />
+            <br/>
+            <label>Email</label>
+            <br/>
+            <input name="email" />
+            <br/>
+            <label>Subject</label>
+            <br/>
+            <input name="subject">
+            <br/>
+            <label>Message</label>
+            <br/>
+            <textarea name="message">
+
+
+      	</textarea>
+          </form>
+          <button onclick="SubForm()">Submit</button>
+        </div>
+      </div>
+    </div>
+    <footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+      <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+      <div class="w3-xlarge w3-section">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+      </div>
+    </footer>
+    <script>
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+
+      window.onscroll = function() {myFunction()};
+      function myFunction() {
+          var navbar = document.getElementById("myNavbar");
+          if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+              navbar.className = "w3-bar" + " w3-card" + " w3-animate-top" + " w3-white";
+          } else {
+              navbar.className = navbar.className.replace(" w3-card w3-animate-top w3-white", "");
+          }
+      }
+
+
+      function toggleFunction() {
+          var x = document.getElementById("navDemo");
+          if (x.className.indexOf("w3-show") == -1) {
+              x.className += " w3-show";
+          } else {
+              x.className = x.className.replace(" w3-show", "");
+          }
+      }
+    </script>
+  </body>
+</html>

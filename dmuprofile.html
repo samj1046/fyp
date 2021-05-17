@@ -1,0 +1,164 @@
+<link rel="stylesheet" href="assets/css/teams.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<body>
+  <div class="main-content">
+    <nav class="navbar navbar-top navbar-expand-md navbar-dark" id="navbar-main">
+      <div class="container-fluid">
+        <div class="form-group mb-0">
+          <div class="input-group input-group-alternative">
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style="min-height: 600px; background-image: url(assets/images/worlds.jpg); background-size: cover; background-position: center top;">
+      <span class="mask bg-gradient-default opacity-8"></span>
+      <div class="container-fluid d-flex align-items-center">
+        <div class="row">
+          <div class="col-lg-7 col-md-10">
+            <h1 class="display-2 text-white">DMU Team Page</h1>
+            <p class="text-white mt-0 mb-5">This is a team page. You can see all the information to do with this team.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid mt--7">
+      <div class="row">
+        <div class="col-xl-4 order-xl-2 mb-5 mb-xl-0">
+          <div class="card card-profile shadow">
+            <div class="row justify-content-center">
+              <div class="col-lg-3 order-lg-2">
+                <div class="card-profile-image">
+                  <a href="#">
+                  <img src="assets/images/dmu.jpg" class="rounded-circle">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-body pt-0 pt-md-4">
+              <div class="row">
+                <div class="col">
+                  <div class="card-profile-stats d-flex justify-content-center mt-md-5">
+                    <div>
+                      <span class="heading">4</span>
+                      <span class="description">Teams</span>
+                    </div>
+                    <div>
+                    </div>
+                    <div>
+                      <span class="heading">18</span>
+                      <span class="description">Players</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <h3>
+                  DMU Esports<span class="font-weight-light"></span>
+                </h3>
+                <div class="h5 font-weight-300">
+                  <i class="ni location_pin mr-2"></i>Leicester, UK
+                </div>
+                <div class="h5 mt-4">
+                  <i class="ni business_briefcase-24 mr-2"></i>Captain - samj1046@gmail.com
+                </div>
+              </div>
+            </div>
+          </div>
+          <br>
+          <form id="search-players">
+            <label for="search">Search Players:</label>
+            <input type="text" name="search" id="search" value="Samj1046">
+            <button name="search_btn" id="search_btn">Search</button>
+          </form>
+          <div id="app"></div>
+          <script src="assets/js/dmu.js"></script>
+        </div>
+        <div class="col-xl-8 order-xl-1">
+          <div class="card bg-secondary shadow">
+            <div class="card-header bg-white border-0">
+              <div class="row align-items-center">
+                <div class="col-8">
+                  <h3 class="mb-0">The Team</h3>
+                </div>
+              </div>
+            </div>
+            <div class="card-body">
+              <form>
+                <h6 class="heading-small text-muted mb-4">team information</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-username">Name</label>
+                        <input type="text" id="input-username" class="form-control form-control-alternative" placeholder="Username" value="DMUT1" readonly>
+                      </div>
+                    </div>
+                    <div class="col-lg-6">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-email">Email address</label>
+                        <input type="email" id="input-email" class="form-control form-control-alternative" placeholder="samj1046@gmail.com" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-first-name">Games</label>
+                        <input type="text" id="input-first-name" class="form-control form-control-alternative" placeholder="First name" value="League Of Legends, Dota2, Csgo, Rocket League" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+            
+                <h6 class="heading-small text-muted mb-4">Achievements</h6>
+                <div class="pl-lg-4">
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-address">League Of Legends</label>
+                        <input id="achievements" class="form-control form-control-alternative"  value="1st Winter 2020, 2nd Winter 2019, UEM 2021" type="text" readonly>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-city">Dota</label>
+                        <input type="text" id="achievements" class="form-control form-control-alternative"  value="2nd Winter 2020" readonly>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group focused">
+                        <label class="form-control-label" for="input-country">Csgo</label>
+                        <input type="text" id="achievements" class="form-control form-control-alternative" value="1st Spring 2021" readonly>
+                      </div>
+                    </div>
+                    <div class="col-lg-4">
+                      <div class="form-group">
+                        <label class="form-control-label" for="input-country">Rocket League</label>
+                        <input type="text" id="achievements" class="form-control form-control-alternative" value="N/A" readonly>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <hr class="my-4">
+                <h6 class="heading-small text-muted mb-4">About The Team</h6>
+                <div class="pl-lg-4">
+                  <div class="form-group focused">
+                    <label>About DMU T1</label>
+                    <textarea rows="4" class="form-control form-control-alternative" readonly>DMUT1 are a full student team for De Montfort University, Leicester. They have teams in many different games with success in all they compete in.</textarea>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="row align-items-center justify-content-xl-between">
+    </div>
+  </footer>
+</body>

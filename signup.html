@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <title>Sign Up</title>
+      <script
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
+      <script>
+        function SubForm (){
+            $.ajax({
+                url:'https://api.apispreadsheets.com/data/9041/',
+                type:'post',
+                data:$("#myForm").serializeArray(),
+                success: function(){
+                  alert("Form Data Submitted :)")
+                },
+                error: function(){
+                  alert("There was an error :(")
+                }
+            });
+        }
+      </script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta charset="utf-8" />
+      <link rel="stylesheet" type="text/css" href="assets/css/signup.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+      <link
+        href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600"
+        rel="stylesheet"
+        type="text/css"
+        />
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+    <body class="body">
+      <div class="login-page">
+        <div class="form">
+          <lottie-player
+            src="https://assets4.lottiefiles.com/datafiles/XRVoUu3IX4sGWtiC3MPpFnJvZNq7lVWDCa8LSqgS/profile.json"
+            background="transparent"
+            speed="1"
+            style="justify-content: center"
+            loop
+            autoplay
+            ></lottie-player>
+          <section>
+            <form id="myForm">
+              <label for="myUser">Username: </label>
+              <input id="myUser" name="username" placeholder="enter your username" required>
+              <label for="myPassword">Password: </label>
+              <input id="myPassword" type="password" name="password" placeholder="enter your password" minlength="8" required>
+              <label for="myConfirmation">Confirm password: </label>
+              <input id="myConfirmation" type="password" placeholder="confirm password" required>
+              <label for="myEmail">Email</label>
+              <input id="myEmail" type="email" name="email" placeholder="enter your email" required>
+              <label for="games">Choose a game:</label>
+              <select name="game" name="game" id="game">
+                <option value="blank">....</option>
+                <option value="LeagueOfLegends">League Of Legends</option>
+                <option value="Dota2">Dota 2</option>
+                <option value="Csgo">Csgo</option>
+                <option value="Valorant">Valorant</option>
+                <option value="Rocketleague">Rocket League</option>
+                <option value="Clashroyal">Clash Royal</option>
+              </select>
+            </form>
+            <button onclick="SubForm()">Submit</button>
+            <button type="button" onclick="window.location.href='hub.html'">Go Back</button>
+          </section>
+        </div>
+      </div>
+    </body>
+  </html>
+</html>
